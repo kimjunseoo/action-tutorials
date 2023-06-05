@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Run pwd
-      run: pwd
-    - name: Run ls -al
-      run : ls -al
+    - name: "context"
+      env: 
+        COMMIT_ID: ${{ github.sha }}
+      run: echo "Commit id ==> $COMMIT_ID"
